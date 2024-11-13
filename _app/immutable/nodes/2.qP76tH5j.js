@@ -1,0 +1,65 @@
+import{b as A,t as U}from"../chunks/disclose-version.CzqFXhPb.js";import{D as B,a2 as C,ar as z,I as D,as as P,at as j,aa as H,u as V,e as I,au as W,ac as X,n as b,av as J,a as O,b as F,c as Q,C as Y,E as Z,V as tt,T as w,U as k,aw as et,S as nt}from"../chunks/runtime.DaDEiceX.js";import{a as rt,s as at}from"../chunks/render.KX0bCzAU.js";import{p as st,o as it,i as ot}from"../chunks/index-client.B63BFQrL.js";function ct(e,t,n,r){var s=e.__attributes??(e.__attributes={});B&&(s[t]=e.getAttribute(t)),s[t]!==(s[t]=n)&&(n==null?e.removeAttribute(t):typeof n!="string"&&ft(e).includes(t)?e[t]=n:e.setAttribute(t,n))}var M=new Map;function ft(e){var t=M.get(e.nodeName);if(t)return t;M.set(e.nodeName,t=[]);for(var n,r=C(e),s=Element.prototype;s!==r;){n=z(r);for(var i in n)n[i].set&&t.push(i);r=C(r)}return t}const lt=()=>performance.now(),h={tick:e=>requestAnimationFrame(e),now:()=>lt(),tasks:new Set};function K(e){h.tasks.forEach(t=>{t.c(e)||(h.tasks.delete(t),t.f())}),h.tasks.size!==0&&h.tick(K)}function dt(e){let t;return h.tasks.size===0&&h.tick(K),{promise:new Promise(n=>{h.tasks.add(t={c:e,f:n})}),abort(){h.tasks.delete(t)}}}function G(e,t){e.dispatchEvent(new CustomEvent(t))}function ut(e){if(e==="float")return"cssFloat";if(e==="offset")return"cssOffset";if(e.startsWith("--"))return e;const t=e.split("-");return t.length===1?t[0]:t[0]+t.slice(1).map(n=>n[0].toUpperCase()+n.slice(1)).join("")}function R(e){const t={},n=e.split(";");for(const r of n){const[s,i]=r.split(":");if(!s||i===void 0)break;const c=ut(s.trim());t[c]=i.trim()}return t}const pt=e=>e;function L(e,t,n,r){var s=(e&J)!==0,i="in",c,d=t.inert,a,f;function v(){var l=Q,_=I;O(null),F(null);try{return c??(c=n()(t,(r==null?void 0:r())??{},{direction:i}))}finally{O(l),F(_)}}var m={is_global:s,in(){t.inert=d,a==null||a.abort(),G(t,"introstart"),a=$(t,v(),f,1,()=>{G(t,"introend"),a==null||a.abort(),a=c=void 0})},out(l){{l==null||l(),c=void 0;return}},stop:()=>{a==null||a.abort()}},p=I;if((p.transitions??(p.transitions=[])).push(m),rt){var u=s;if(!u){for(var o=p.parent;o&&o.f&D;)for(;(o=o.parent)&&!(o.f&P););u=!o||(o.f&j)!==0}u&&H(()=>{V(()=>m.in())})}}function $(e,t,n,r,s){if(W(t)){var i,c=!1;return X(()=>{if(!c){var l=t({direction:"in"});i=$(e,l,n,r,s)}}),{abort:()=>{c=!0,i==null||i.abort()},deactivate:()=>i.deactivate(),reset:()=>i.reset(),t:()=>i.t()}}if(!(t!=null&&t.duration))return s(),{abort:b,deactivate:b,reset:b,t:()=>r};const{delay:d=0,css:a,tick:f,easing:v=pt}=t;var m=[];if(f&&f(0,1),a){var p=R(a(0,1));m.push(p,p)}var u=()=>1-r,o=e.animate(m,{duration:d});return o.onfinish=()=>{var l=1-r,_=r-l,g=t.duration*Math.abs(_),E=[];if(g>0){if(a)for(var N=Math.ceil(g/16.666666666666668),x=0;x<=N;x+=1){var S=l+_*v(x/N),q=a(S,1-S);E.push(R(q))}u=()=>{var y=o.currentTime;return l+_*v(y/g)},f&&dt(()=>{if(o.playState!=="running")return!1;var y=u();return f(y,1-y),!0})}o=e.animate(E,{duration:g,fill:"forwards"}),o.onfinish=()=>{u=()=>r,f==null||f(r,1-r),s()}},{abort:()=>{o&&(o.cancel(),o.effect=null,o.onfinish=b)},deactivate:()=>{s=b},reset:()=>{},t:()=>u()}}const vt=e=>e;function ht(e,{delay:t=0,duration:n=400,easing:r=vt}={}){const s=+getComputedStyle(e).opacity;return{delay:t,duration:n,easing:r,css:i=>`opacity: ${i*s}`}}const mt=`⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠈⠉⠛⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠈⢭⡻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠹⣦⢻⣿⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠛⠛⠛⠛⠛⠛⠛⠛⠛⣛⡻⢿⣿⣿⠀⠀⠀⠀⠀⠀⢹⣧⢻⣿⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠙⢷⣭⡻⡇⠀⠀⠀⠀⠀⠀⢿⣎⣿⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠙⣿⣎⠀⠀⠀⠀⠀⠀⠸⣿⡼⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⡀⠀⠀⠀⠀⠀⠀⠈⢻⠆⠀⠀⠀⠀⠀⠀⠉⠁⠀⠉⠛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⠉⠀⠒⠲⢶⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⡿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣶⣶⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⡽⠬⠉⠉⠉⠉⠛⠛⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⣠⡿⠋⡀⠀⠀⠀⣠⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣴⣶⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣛⣛⣛⣦⠄⠀⠀⠀⠀⠀⠀⠁⠀⠀⢰⠟⣠⢶⠁⠀⠀⣴⢟⣵⠀⢀⠀⠀⡀⠀⠀⠀⣀⣤⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠛⠉⠛⠒⠛⠃⠀⡤⠀⠀⠀⠀⠄⠀⠀⣸⣯⡿⠀⠀⢈⣴⣿⡟⠀⠄⠀⠀⡅⠀⠴⠶⠶⠖⠋⠉⠛⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣤⣄⣀⠀⠀⠀⠸⡄⠀⠀⢀⣀⠀⠐⢿⣿⡇⠀⣴⡿⠟⠉⣀⣀⡀⢀⣷⠁⠀⠀⠀⠀⢀⣀⣤⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⡘⢇⠀⠀⠀⣿⣼⣄⣠⡙⡁⡜⣉⣀⣰⣿⣏⣿⠃⢸⠇⠀⠀⣠⣶⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠋⠁⠉⠂⠀⢠⣬⣭⣿⣿⢿⣿⣟⣛⣓⣶⣾⠏⠚⠁⠀⠀⠉⠉⠈⢉⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣆⣠⠀⠀⢻⣿⣿⣟⢸⣿⣿⣿⣿⣿⡟⢠⣤⣤⣴⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣟⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⣴⣆⠈⠻⣿⣯⠵⠿⣿⣿⡿⢋⣾⣜⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠛⠿⣛⣵⡾⢇⣿⠹⣆⠀⠘⠿⣿⣿⢟⣩⢮⣾⣿⣿⣿⣮⡻⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠙⠉⠀⠀⠠⠾⠛⠁⣠⣾⡿⠀⠹⣆⢹⣄⠀⣶⡿⣣⢏⣿⣿⣷⣮⡙⢿⣷⡁⣮⢁⣍⠻⣿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣩⣭⣥⣤⣤⣝⣂⡻⠧⠛⢱⣟⣀⣽⣿⣟⣋⣉⡶⢒⣼⡇⣼⣿⠀⠀⠀⣞⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⢛⣉⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠴⣾⣿⣿⣿⣿⣿⡆⢸⣿⣿⣿⣿⣭⣝⠛⣫⣾⣿⡿⢰⣿⣿⡇⠀⠀⣿⡄⢠⣮⣝⡻⢿⣿⣿⣿⣿
+⣿⣿⣿⣿⡇⣿⣿⣿⢿⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⠿⠿⢿⣿⡇⠈⢿⠿⠿⢟⣫⣵⣿⣿⡿⠟⢡⣿⣿⣿⡇⠀⢀⣿⣧⣿⣿⣿⣿⣷⣮⡛⣿⣿
+⣿⣿⡿⠋⠀⢿⣿⣿⢸⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠢⢤⣀⡀⠈⠙⠻⢿⣷⣶⣶⣾⣿⣿⣿⡿⠟⠋⠁⠀⢀⣾⣿⣿⣿⡇⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⢣⣿⣿
+⣿⡿⠁⠀⠀⢸⣿⡏⠈⣿⡿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠒⠲⠶⠶⣿⡿⠿⠛⠉⠁⠀⠀⠀⡀⣀⣾⣿⣿⣿⣿⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⢏⣶⡙⣿
+⡿⠃⠀⠀⢀⡎⣿⡇⠀⢿⡇⠘⢿⣿⡀⠀⠀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢒⣩⣾⣿⢟⣽⣿⣿⣿⣿⣿⣿⣿⣿⡟⣿⣿⣿⡟⣼⣿⣷⠿
+⡇⠀⠀⠀⢸⣿⡘⡇⠀⠸⡇⠀⠈⢿⣷⠀⠀⠸⣷⣤⡀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣠⢄⣠⣶⣿⣿⢟⣵⣿⡟⣿⣿⣿⣿⣿⣿⣿⣿⠁⢻⣿⡟⠀⣫⣾⣿⡇
+⣷⠀⠀⠀⠈⢿⣿⡄⠀⠀⢣⠀⠀⠈⢿⣷⡀⠀⢻⣿⣿⣷⣤⣀⠀⠀⠀⠈⠉⠉⠉⢉⣩⣶⣿⠿⠛⢉⣴⣿⠟⠉⢰⣿⣿⣿⣿⣿⣿⣿⡏⠀⠘⠉⠀⠀⣩⢟⣩⣾
+⣿⠀⠀⠈⠳⢤⣉⠃⠀⠀⠈⠀⠀⠀⠀⢻⣷⡄⠈⣿⠻⢿⣿⣿⣿⣷⣶⣤⣤⣤⣾⠿⠛⠉⠁⣠⣴⣿⠟⠁⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⣈⣵⣿⡏⣿
+⡏⠀⠀⣿⣷⡶⢉⡀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣦⡸⣷⡀⠉⠙⠛⠿⠿⠟⠛⠉⠀⠀⢀⣤⣾⡿⠛⠁⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⠇⠀⢀⣀⣴⣦⣭⣻⣿⣶
+  ⢰⣿⣿⣾⣿⣿⣿⣶⣶⣦⡄⠀⠀⠀⠀⠈⢿⣿⣿⣿⣄⠀⠀⠀⠀⠀⣀⣀⣤⣾⣿⠿⠋⠀⠀⠀⠀⣠⣿⣿⣿⣿⣿⣿⣿⣿⡟⣰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏
+`,_t=` ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢟⣡⣶⣿⣿⣿⣿⣶⣮⣙⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣩⣽⣶⣶⢰⡆⣮⣙⠿⣿⣿⣿⣿⣿⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣱⣿⣷⣬⡛⢿⣿⣿⣿⣿⣿⣧⡘⡿⢛⣛⣽⣽⣷⣶⣶⣮⣭⣍⡛⠛⡋⢉⠙⠿⠿⠿⠿⠿⠿⢣⣾⣿⣿⢿⣿⡇⡇⢻⣿⣷⠘⢿⣿⣿⣿⣹⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠰⣛⣻⠿⠿⣿⣶⣍⢻⣿⣿⣿⣿⣷⡸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣩⣶⣾⣿⣿⣿⣟⣒⣒⣉⣙⠾⣿⣿⡇⡇⢸⣿⣿⢰⡸⣿⠹⡚⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣯⣽⣿⣿⣷⣦⣝⢻⣷⡙⣮⢍⢿⣿⡇⣒⡒⠿⣷⣶⣭⡛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣵⣄⡙⢱⡇⣿⣿⡟⣼⡇⢻⡀⠉⠮⣭
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⣉⣭⣭⣍⣛⠿⣿⣷⡜⢿⣌⢎⣆⢻⢣⣿⣿⣷⣶⣍⠻⣿⣿⣿⣿⣿⣿⡿⠿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⠰⣿⡟⣰⡿⢳⠸⠘⡶⣁⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⡘⣿⣿⣿⣿⣷⣌⠻⣿⡌⣿⡌⣿⢌⣾⣿⣿⣿⣿⣿⣷⣬⣿⣿⣿⣿⣿⣿⣷⣮⡑⠌⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠈⠴⠿⠡⢾⣶⣶⣶⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣌⠻⣿⣿⣿⣿⣧⢹⣿⠸⠟⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡌⠊⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣿⣿⡿⠶⠌⠙⢿⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡗⣠⣍⡙⠛⠛⠃⠉⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⡆⣻⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣤⣌⠻⣷⣶⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢣⣿⣿⢡⣿⡇⣾⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡷⢼⣧⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⠻⣿⣷⡌⢻⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢸⣿⡿⣼⡿⢇⣿⣇⢿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⠟⡡⢄⡀⠈⠋⠩⢍⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⠙⢿⡄⢿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⣾⣿⡇⣿⣧⣿⣿⣿⣼⣿⣿⣿⣿⡏⣿⣿⣿⠟⡏⣼⣿⣿⡟⢹⣿⢸⣿⣦⣥⣤⣴⣭⣤⣤⢹⣿⢻⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣧⠀⠻⢸⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢳⣿⣿⡇⣿⣿⣿⣿⡇⣿⣿⣿⣿⢻⡇⣿⣿⠾⠀⠃⠛⣃⣛⠇⠘⠿⣎⠻⣿⣿⣿⣿⣿⣿⡟⣸⡹⢸⢿⣿⣿⣿⣿⣧⠹⣿⣆⠹⣿⡄⠆⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⣸⣿⣿⠇⢻⡿⣿⣯⠱⠹⣿⣧⠸⡎⠃⠈⠡⢶⣦⠀⢀⢙⠻⠟⠦⢑⣶⣶⣿⣿⣿⣿⣉⠉⠄⢉⡁⠉⠀⣿⣿⣿⣿⣿⡇⠘⣿⡆⠹⢁⣿⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢁⣿⣿⠏⣾⠸⣧⢹⣿⣷⡑⣌⢛⣓⣀⣤⣴⢲⡾⠿⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⣃⣾⣿⡏⣹⣿⣿⢡⡄⡿⢳⣠⣾⣿⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣼⣿⡏⣼⣿⡆⢿⣧⠙⠅⠲⢦⣼⡿⣷⣜⠻⠀⠀⠀⠀⠀⠈⠻⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣷⣮⣍⣛⠉⣰⣿⡿⠃⡞⠀⣡⣾⣿⣿⣿⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⣿⢁⣿⡟⣸⣿⣿⠟⠘⠏⣠⣼⣿⡀⢹⣿⣦⡍⢠⣴⣾⣿⣿⣿⣷⣦⣄⢹⣿⣿⣿⣿⣿⣿⡿⠛⠁⠈⠁⠀⠉⣀⡬⢉⣥⡔⠀⣤⣿⣿⣿⣿⣿⣿⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⡟⣼⡿⢱⣿⣿⠟⡄⣿⡄⢻⣏⠇⣄⢻⣿⣿⣷⣿⣿⣿⡿⣿⣟⢿⣿⣿⣾⣿⣿⣿⣿⠻⣟⣠⣶⣿⣿⣿⣦⡀⠘⠀⣾⣿⣿⡆⣭⣭⣽⣿⣿⣿⣿⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⣿⠃⡿⣡⣟⣿⠏⣴⢠⣿⡷⡌⢻⣷⡌⠘⣿⣿⣿⣿⣿⣿⣧⣿⣿⣼⣿⣿⣿⣿⣿⣿⣿⠰⣿⣿⣿⣿⣿⡟⣿⣷⡇⠃⠹⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⡿⡸⢡⣿⣿⢃⣼⣿⢸⣿⡇⠻⣦⣙⠳⠖⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣿⣿⣿⣯⣴⣿⣿⣿⣿⣿⣧⣼⣿⣧⢸⣦⢹⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿
+ ⣿⣿⣿⣿⣿⣿⣿⠇⢡⣿⡿⢣⣾⣿⡏⣿⣿⣿⣿⣿⣿⣶⣦⡈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢃⡛⠿⠿⠟⣻⣿⣿⣿⣿⣿⣿⣿⣿⡟⣀⢻⡆⢻⡇⣿⣿⣿⣿⣿⣿⣿⠛⠋
+ ⣿⣿⣿⣿⣿⣿⡟⢠⣿⡿⣡⣿⣿⣿⠇⣿⣿⣿⢠⣤⣤⠤⣤⣤⡌⢿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠁⣿⣆⢻⣆⠃⢰⣶⣶⣶⣶⠆⠀⠀⠀
+ ⢿⣿⣿⣿⣿⣿⢣⣿⡟⣰⣿⣿⣿⣿⢰⣿⣿⣿⣿⣿⣿⣼⣿⢋⠔⠠⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢋⣴⡇⣿⣿⢆⢻⣆⢻⣿⣿⣿⣿⣷⡀⠀⠀
+ ⢸⣿⣿⣿⣿⡇⣼⠏⣴⣿⣿⣿⣿⡟⢸⣿⣿⣿⣿⣿⣿⣿⣧⡞⢰⣿⣿⡆⣈⡛⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⣩⢰⣿⣿⡇⡿⣱⣿⡎⢿⢸⣿⣿⣿⣿⣿⣷⠀⠀
+ ⢸⣿⣿⣿⡟⢸⠏⣼⣿⣿⣿⣿⣿⡇⢸⣿⣿⣿⣿⣿⣿⣿⣿⣷⣼⣿⣿⢰⣿⣿⣷⣦⣍⣛⠿⠿⠿⣿⠿⠿⢛⣉⣵⣶⢻⣿⣾⣿⣿⡇⣿⣿⣿⣿⡌⠀⣿⣿⣿⣿⣿⣿⣧⠀
+ ⢸⣿⣿⣿⢡⠏⣼⣿⣿⣿⣿⣿⣿⢰⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠿⠏⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣀⡀⣿⣿⣿⣿⣿⣼⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⡆⣿⣿⣿⣿⣿⣿⣿⣿
+ ⣾⣿⣿⠏⠎⣼⣿⣿⣿⣿⣿⣿⡏⠚⢘⣛⣉⣭⣥⣭⣥⣶⣶⣶⣿⣌⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣿⣿
+ ⣿⣿⡿⠐⣼⣿⣿⣿⣿⣿⠟⣩⣴⣶⣦⡙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣮⡙⢿⣿⣿⣿⣿⣿⠟⡩⠩⠤⠄⠭⢭⣽⣿⣟⡻⠿⣿⣿⣿⢸⣿⣿⣿⣿⣿⡄⣿⣿⣿⣿⣿⣿⣿
+ ⠻⠿⠃⣰⣿⣿⣿⣿⡿⠁⣴⣿⣿⣿⣿⣿⣆⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣌⠛⣛⡛⠇⣷⣬⣃⠛⠛⢛⣿⣿⣿⣿⠳⠄⡐⠶⢶⡶⢌⠙⠻⣿⣿⣷⢻⣿⣿⣿⣿⣿⣿
+ ⣿⡇⢠⣿⣿⣿⣿⡿⢁⣴⣿⣿⣿⣿⣿⣿⣿⣷⣌⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡌⢿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⠙⠻⠷⠶⠒⠀⠀⠹⣿⣿⡈⣿⣿⣿⣿⣿⢣
+ ⡿⢡⣿⣿⣿⣿⣿⠃⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣷⣘⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⡄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣴⣶⡆⢺⡂⣿⣿⣧⢸⣿⣿⣿⣿⣸
+ ⣇⣾⣿⣿⣿⣿⡟⢸⣿⣿⣿⣿⣿⣿⣿⣿⣮⡻⣿⣿⣿⣷⣌⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠁⣼⡇⣿⣿⣿⡎⢿⣿⣿⣿⣿
+ ⣿⣿⣿⣿⣿⣿⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⡻⣿⣿⣿⣷⣬⡙⠿⣿⣿⣿⣿⣿⣿⣿⢻⣶⣶⣬⣭⣭⣭⣽⣿⣿⣿⣛⣛⣛⣛⣛⣛⣋⠀⢻⡇⢻⣿⣿⣷⡸⡿⠿⠿⢹
+`,T=[{content:mt,label:"Goku staring at viewer"},{content:_t,label:"Sailor Moon Girl"}];function bt(){const e=Math.floor(Math.random()*T.length),t=parseInt(localStorage.getItem("fetch_ascii")??"0",10)===e,n=e-1*+t;return localStorage.setItem("fetch_ascii",`${n>=0?n:T.length+n}`),T.at(n)}var gt=U('<section class="flex h-[35%] w-full flex-col items-center gap-16 md:flex-row md:items-start"><pre class="aspect-square max-w-fit overflow-hidden text-clip whitespace-pre-wrap text-center text-xs max-[450px]:hidden"> </pre> <div class="flex w-max flex-col gap-2"><h1 class="mb-2 min-h-[2ch] border-x-0 border-b-2 border-t-0 border-dashed py-2 [border-color:var(--base02)] [width:fit-content]" id="about-me">tobybridle</h1> <ul class="svelte-1k0hrby"><li><h3 class="emphasised-text svelte-1k0hrby">Email:</h3> <a href="mailto:bridle.toby@gmail.com">bridle.toby@gmail.com</a></li> <li><h3 class="emphasised-text svelte-1k0hrby">Location:</h3> United Kingdom</li> <li><h3 class="emphasised-text svelte-1k0hrby">GitHub:</h3> <a href="https://github.com/tobybridle">@TobyBridle</a></li> <li><h3 class="emphasised-text svelte-1k0hrby">Location:</h3> United Kingdom</li></ul></div></section>'),yt=U('<div class="p-8 sm:p-16"><div class="flex"><span class="text-gray">[tobybridle@home resume]$&ThinSpace;</span> <span>tobyfetch</span></div> <br> <br> <!></div>');function Et(e,t){Y(t,!0);const n=st({state:null});it(()=>{n.state=bt()});function r(c,{speed:d=1,delay:a=0}){if(!(c.childNodes.length===1&&c.childNodes[0].nodeType===Node.TEXT_NODE))throw new Error("This transition only works on elements with a single text node child");const v=c.textContent||"";return{duration:v.length/(d*.01),delay:a,tick:p=>{const u=~~(v.length*p);c.textContent=v.slice(0,u)}}}var s=yt(),i=tt(w(s),6);ot(i,()=>n.state!==null,c=>{var d=gt(),a=w(d),f=w(a,!0);k(a),et(2),k(d),nt(()=>{ct(a,"title",n.state.label),at(f,n.state.content)}),L(1,a,()=>r,()=>({speed:n.state.content.length/3,delay:500})),L(1,d,()=>ht,()=>({delay:500})),A(c,d)}),k(s),A(e,s),Z()}export{Et as component};
