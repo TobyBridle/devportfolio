@@ -34,23 +34,26 @@
 </script>
 
 <div class="p-8 sm:p-16">
-	<div class="flex">
-		<span class="text-gray">[tobybridle@home resume]$&ThinSpace;</span>
-		<span>tobyfetch</span>
-	</div>
+	{#if window_loaded.state}
+		<section class="">
+			<span class="text-gray">[tobybridle@home resume]$&ThinSpace;</span>
+			<span in:typewriter={{ speed: 1.2 }}>tobyfetch</span>&NoBreak;
+			<pre class="cursor inline">█</pre>
+		</section>
+	{/if}
 	<br />
 	<br />
 	{#if fetch_ascii.state !== null}
 		<section
 			class="flex h-[35%] w-full flex-col items-center gap-16 md:flex-row md:items-start"
-			in:fade={{ delay: 500 }}
+			in:fade={{ delay: 1200 }}
 		>
 			<pre
 				class="aspect-square max-w-fit overflow-hidden text-clip whitespace-pre-wrap text-center text-xs max-[450px]:hidden"
 				title={fetch_ascii.state.label}
 				in:typewriter={{
 					speed: fetch_ascii.state.content.length / 3,
-					delay: 500
+					delay: 1200
 				}}>{fetch_ascii.state.content}</pre>
 			<div class="flex w-max flex-col gap-2">
 				<h1
@@ -85,5 +88,16 @@
 <style>
 	ul > li > h3 {
 		min-width: 10ch;
+	}
+
+	.cursor {
+		position: absolute;
+		animation: blink 530ms infinite steps(2);
+	}
+
+	@keyframes blink {
+		0% {
+			opacity: 0;
+		}
 	}
 </style>
